@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style>
+        h1{
+            margin-top:20px;
+            margin-left:30px;
+            font-weight:bold;
+            font-size: 40px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #B2CCFF;
+        }
+        .date{
+            float:right;
+            font-size:10px;
+            color: #BDBDBD;
+        }
+        .body{
+            margin-left:30px;
+        }
+    </style>
+</head>
+
+{%for diary in diarys.all%}
+  <h1>{{diary.title}}</h1>
+<div class="date">
+  <p>{{diary.pub_date}}</p>
+</div>
+<div class="body">
+  <p>{{diary.body}}</p>
+</div>
+  <br><br>
+{%endfor%}
+</html>
